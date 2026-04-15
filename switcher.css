@@ -1,0 +1,73 @@
+/* ============================================
+   Shared version switcher (all 3 variants)
+   ============================================ */
+
+.version-switcher {
+    position: fixed;
+    top: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    padding: .42rem .5rem;
+    background: rgba(18, 18, 20, .78);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .09);
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .45), 0 2px 6px rgba(0, 0, 0, .2);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    mix-blend-mode: normal;
+}
+
+.version-switcher__label {
+    color: rgba(255, 255, 255, .5);
+    font-size: .68rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    padding: 0 .7rem 0 .85rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.version-switcher__btn {
+    padding: .5rem 1.05rem;
+    font-size: .78rem;
+    font-weight: 500;
+    letter-spacing: .03em;
+    color: rgba(255, 255, 255, .72);
+    border-radius: 999px;
+    transition: color .25s ease, background .25s ease, transform .25s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.version-switcher__btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+}
+
+/* Active states — highlight current version with its own accent */
+body[data-version="retro"]     .version-switcher__btn[data-version="retro"],
+body[data-version="editorial"] .version-switcher__btn[data-version="editorial"],
+body[data-version="card"]      .version-switcher__btn[data-version="card"] {
+    color: #121214;
+    background: #f1e7d0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    cursor: default;
+}
+
+body[data-version="editorial"] .version-switcher__btn[data-version="editorial"] {
+    background: #e8e2d3;
+}
+body[data-version="card"] .version-switcher__btn[data-version="card"] {
+    background: #f5f2ec;
+}
+
+@media (max-width: 640px) {
+    .version-switcher { top: .7rem; padding: .32rem .38rem; gap: .15rem; }
+    .version-switcher__label { display: none; }
+    .version-switcher__btn { padding: .42rem .8rem; font-size: .72rem; }
+}

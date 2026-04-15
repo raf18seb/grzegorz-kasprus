@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grzegorz Kasprus — Wizytówka</title>
+    <meta name="description" content="Grzegorz Kasprus — Prezes Okręgu Rybnickiego Konfederacji. Wizytówka.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="switcher.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body data-version="card">
+
+    <!-- Version switcher -->
+    <nav class="version-switcher" aria-label="Wersje strony">
+        <span class="version-switcher__label">Wersja</span>
+        <a href="index.html"     class="version-switcher__btn" data-version="retro">Retro</a>
+        <a href="editorial.html" class="version-switcher__btn" data-version="editorial">Edytorial</a>
+        <a href="card.html"      class="version-switcher__btn" data-version="card">Wizytówka</a>
+    </nav>
+
+    <main class="card">
+
+        <!-- PORTRAIT SIDE -->
+        <aside class="card__portrait">
+            <div class="card__photo">
+                <img src="assets/profilowe.jpg" alt="Grzegorz Kasprus">
+            </div>
+            <div class="card__identity">
+                <p class="card__eyebrow">· Rybnik · MMXXVI ·</p>
+                <h1 class="card__name">
+                    <span>Grzegorz</span>
+                    <span>Kasprus</span>
+                </h1>
+                <div class="card__rule"></div>
+                <p class="card__role">Prezes Okręgu Rybnickiego<br>Konfederacji</p>
+            </div>
+            <div class="card__corner card__corner--tl"></div>
+            <div class="card__corner card__corner--tr"></div>
+            <div class="card__corner card__corner--bl"></div>
+            <div class="card__corner card__corner--br"></div>
+        </aside>
+
+        <!-- CONTENT SIDE -->
+        <section class="card__content">
+            <nav class="card__tabs" role="tablist" aria-label="Sekcje">
+                <button class="card__tab active" role="tab" data-tab="profil"   aria-selected="true">
+                    <span class="card__tab-num">01</span>
+                    <span class="card__tab-label">Profil</span>
+                </button>
+                <button class="card__tab" role="tab" data-tab="wartosci" aria-selected="false">
+                    <span class="card__tab-num">02</span>
+                    <span class="card__tab-label">Wartości</span>
+                </button>
+                <button class="card__tab" role="tab" data-tab="pasja"    aria-selected="false">
+                    <span class="card__tab-num">03</span>
+                    <span class="card__tab-label">Pasja</span>
+                </button>
+                <button class="card__tab" role="tab" data-tab="kontakt"  aria-selected="false">
+                    <span class="card__tab-num">04</span>
+                    <span class="card__tab-label">Kontakt</span>
+                </button>
+            </nav>
+
+            <div class="card__panels">
+
+                <!-- PROFIL -->
+                <article class="card__panel active" data-panel="profil" role="tabpanel">
+                    <p class="card__meta">§ Kilka słów o mnie</p>
+                    <h2 class="card__title">Rybniczanin <em>z wyboru.</em></h2>
+                    <p class="card__lead">Urodzony i wychowany w Rybniku. Zawodowo związany z sektorem prywatnym od kilkunastu lat. Wierzę, że wolność jednostki, niskie podatki i silne wspólnoty lokalne to nie slogany, lecz warunki, bez których żadne miasto nie rozkwitnie.</p>
+                    <dl class="card__facts">
+                        <div><dt>Urodzony</dt><dd>Rybnik</dd></div>
+                        <div><dt>Wykształcenie</dt><dd>wyższe ekonomiczne</dd></div>
+                        <div><dt>Funkcja</dt><dd>Prezes Okręgu</dd></div>
+                        <div><dt>W&nbsp;Konfederacji od</dt><dd>2019</dd></div>
+                        <div><dt>Pasje</dt><dd>fortepian, literatura</dd></div>
+                        <div><dt>Status</dt><dd>żonaty</dd></div>
+                    </dl>
+                </article>
+
+                <!-- WARTOŚCI -->
+                <article class="card__panel" data-panel="wartosci" role="tabpanel">
+                    <p class="card__meta">§ W co wierzę</p>
+                    <h2 class="card__title">Cztery <em>zasady.</em></h2>
+                    <ul class="card__values">
+                        <li>
+                            <span class="card__val-num">I</span>
+                            <div><h3>Wolność gospodarcza</h3><p>Państwo powinno być nocnym stróżem, nie natrętnym gospodarzem.</p></div>
+                        </li>
+                        <li>
+                            <span class="card__val-num">II</span>
+                            <div><h3>Niskie podatki</h3><p>Każda złotówka w kieszeni rybniczanina pracuje lepiej.</p></div>
+                        </li>
+                        <li>
+                            <span class="card__val-num">III</span>
+                            <div><h3>Silna wspólnota</h3><p>Rodzina i sąsiedztwo to prawdziwy kapitał miasta.</p></div>
+                        </li>
+                        <li>
+                            <span class="card__val-num">IV</span>
+                            <div><h3>Tradycja</h3><p>Bez korzeni nie ma skrzydeł. Szanuję dziedzictwo Śląska.</p></div>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- PASJA -->
+                <article class="card__panel" data-panel="pasja" role="tabpanel">
+                    <p class="card__meta">§ Poza polityką</p>
+                    <h2 class="card__title">Przy <em>fortepianie.</em></h2>
+                    <div class="card__pasja">
+                        <div class="card__pasja-img">
+                            <img src="assets/zdjecie.jpg" alt="Grzegorz Kasprus">
+                        </div>
+                        <div class="card__pasja-text">
+                            <p>Kiedy nie spieram się o przyszłość miasta, siadam do fortepianu. Chopin, Paderewski, czasem odrobina Gershwina — muzyka jest moim schronieniem.</p>
+                            <p>Ubieram się elegancko, ale bez krawata. Lubię dobrą książkę, starannie zaparzoną kawę i wieczory bez telefonu.</p>
+                            <blockquote>„Elegancja nie polega na krawacie, tylko na porządku w&nbsp;myślach."</blockquote>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- KONTAKT -->
+                <article class="card__panel" data-panel="kontakt" role="tabpanel">
+                    <p class="card__meta">§ Napisz, zadzwoń</p>
+                    <h2 class="card__title">Zostańmy <em>w kontakcie.</em></h2>
+                    <ul class="card__contact">
+                        <li>
+                            <span class="card__c-label">e-mail</span>
+                            <a href="mailto:g.kasprus@konfederacja-rybnik.pl">g.kasprus@konfederacja-rybnik.pl</a>
+                        </li>
+                        <li>
+                            <span class="card__c-label">telefon</span>
+                            <a href="tel:+48600000000">+48 600 000 000</a>
+                        </li>
+                        <li>
+                            <span class="card__c-label">biuro</span>
+                            <span>Rynek 1, 44-200 Rybnik<br><em>pn.–pt. 10:00–16:00</em></span>
+                        </li>
+                        <li>
+                            <span class="card__c-label">w&nbsp;sieci</span>
+                            <span class="card__socials">
+                                <a href="#">Facebook</a>
+                                <a href="#">X</a>
+                                <a href="#">Instagram</a>
+                                <a href="#">YouTube</a>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="card.js"></script>
+</body>
+</html>
