@@ -473,15 +473,40 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
         padding: 4.5rem 1.2rem 1.5rem;
         gap: 1.5rem;
         min-height: 100vh;
+        max-width: 100%;
     }
     .card__portrait {
         min-height: 340px;
     }
     .card__identity { padding: 1.8rem 1.5rem 1.6rem; }
+    .card__content { overflow: visible; }
+    .card__content::before { inset: 6px; }
+    .card__tabs { margin: 6px 6px 0; }
     .card__tab { padding: 1rem .4rem; }
     .card__tab-num { font-size: .65rem; }
     .card__tab-label { font-size: .9rem; }
-    .card__panel { padding: 1.8rem 1.5rem 1.5rem; }
+
+    /* Panels flow in the document on mobile so they actually take up space */
+    .card__panels {
+        position: static;
+        overflow: visible;
+        padding: 6px;
+        flex: none;
+    }
+    .card__panel {
+        position: static;
+        inset: auto;
+        display: none;
+        opacity: 1;
+        transform: none;
+        overflow: visible;
+        padding: 1.8rem 1.5rem 1.5rem;
+        height: auto;
+    }
+    .card__panel.active {
+        display: block;
+    }
+
     .card__facts { grid-template-columns: 1fr; }
     .card__values { grid-template-columns: 1fr; }
     .card__pasja { grid-template-columns: 1fr; }
